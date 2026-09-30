@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #111827;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+        nav {
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            color: #38bdf8;
+            font-size: 40px;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        button {
+            background: #38bdf8;
+            color: black;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        section {
+            background: #1f2937;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        .skills,
+        .projects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .skill,
+        .project {
+            background: #374151;
+            padding: 20px;
+            border-radius: 10px;
+            width: 220px;
+        }
+
+        .skill h3,
+        .project h3 {
+            color: #38bdf8;
+        }
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 12px;
+            margin: 5px;
+            border: none;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .light {
+            background: white;
+            color: #111827;
+        }
+
+        .light section {
+            background: #e5e7eb;
+        }
+
+        .light nav a {
+            color: #111827;
+        }  @media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .skill,
+    .project {
+        width: 90%;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+    }
+} footer {
+    margin-top: 40px;
+    padding: 25px;
+    background: #0b1120;
+    border-radius: 12px;
+    color: #9ca3af;
+} footer a {
+    color: #38bdf8;
+    text-decoration: none;
+    margin: 10px;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <button onclick="toggleMode()">🌙 Change Mode</button>
+
+    <div class="hero" id="home">
+        <h1>Hi, I'm Timmy 👋</h1>
+        <p>I create websites using HTML, CSS and JavaScript.</p>
+
+        <button onclick="document.getElementById('contact').scrollIntoView()">
+            Contact Me
+        </button>
+    </div>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer and i build amazing website.</p>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <p>Website Design</p>
+        <p>Graphic Design</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Building website structure.</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Designing websites.</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Making websites interactive.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+            <div class="project">
+                <h3>My First Website</h3>
+                <p>A website I built using HTML, CSS and JavaScript.</p>
+
+                <button onclick="alert('This is my first project!')">
+                    View Project
+                </button>
+            </div>
+
+            <div class="project">
+                <h3>Coming Soon</h3>
+                <p>More projects will be added here.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <br><br>
+
+            <input type="email" placeholder="Your Email" required>
+            <br><br>
+
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle("light");
+        }
+
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            alert("Thanks! Your message has been received 🚀");
+
+            this.reset();
+        });
+    </script>
+<footer>
+    <h3>Connect With Me</h3>
+
+    <a href="https://github.com/" target="_blank">GitHub</a>
+    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+
+    <p>© 2026 Timmy. All rights reserved.</p>
+    <p>Built with HTML, CSS & JavaScript 💻</p>
+</footer>
+    
+
+</body>
+</html>
