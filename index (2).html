@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Lexis Power | Solar, Construction & Electrical Solutions</title>
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#050912;
+    color:white;
+    line-height:1.8;
+    font-size:20px;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:22px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(5,9,18,.92);
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+    z-index:1000;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.logo{
+    font-size:32px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#00aaff;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+}
+
+.nav-links a{
+    font-size:19px;
+    color:#dce8f5;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00aaff;
+}
+
+.nav-btn{
+    background:#008cff;
+    padding:14px 22px;
+    border-radius:35px;
+    font-size:19px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.nav-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,140,255,.35);
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    padding:150px 7% 80px;
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(5,9,18,.65),
+        rgba(5,9,18,.96)
+    ),
+    url("images/house1.jpg")
+    center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:950px;
+    position:relative;
+    z-index:2;
+}
+
+.small-title{
+    color:#00aaff;
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:4px;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(65px,10vw,120px);
+    line-height:1;
+    margin-bottom:30px;
+}
+
+.hero h1 span{
+    color:#00aaff;
+}
+
+.hero p{
+    max-width:800px;
+    color:#c7d2df;
+    font-size:27px;
+    margin-bottom:40px;
+}
+
+.buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:18px 32px;
+    border-radius:40px;
+    font-size:21px;
+    font-weight:bold;
+    transition:.3s;
+    display:inline-block;
+}
+
+.primary{
+    background:#008cff;
+}
+
+.primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 35px rgba(0,140,255,.4);
+}
+
+.secondary{
+    border:2px solid rgba(255,255,255,.3);
+}
+
+.secondary:hover{
+    background:white;
+    color:#050912;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section{
+    padding:120px 7%;
+}
+
+.section-title{
+    text-align:center;
+    max-width:850px;
+    margin:auto;
+}
+
+.section-title h2{
+    font-size:clamp(48px,6vw,75px);
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.section-title p{
+    color:#aebbc9;
+    font-size:23px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services{
+    background:#070d18;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+    margin-top:70px;
+}
+
+.service-card{
+    background:linear-gradient(
+        145deg,
+        #0d1726,
+        #09111d
+    );
+
+    border:1px solid rgba(255,255,255,.1);
+    padding:45px 30px;
+    border-radius:25px;
+    transition:.4s;
+}
+
+.service-card:hover{
+    transform:translateY(-12px);
+    border-color:#008cff;
+    box-shadow:0 15px 40px rgba(0,140,255,.15);
+}
+
+.icon{
+    font-size:55px;
+    margin-bottom:25px;
+}
+
+.service-card h3{
+    margin-bottom:15px;
+    font-size:29px;
+}
+
+.service-card p{
+    color:#aebbc9;
+    font-size:20px;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+    background:#050912;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+    margin-top:70px;
+}
+
+.project-card{
+    position:relative;
+    overflow:hidden;
+    border-radius:25px;
+    background:#0b1421;
+    border:1px solid rgba(255,255,255,.1);
+    min-height:430px;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+    border-color:#008cff;
+    box-shadow:0 20px 50px rgba(0,140,255,.18);
+}
+
+.project-card img{
+    width:100%;
+    height:430px;
+    object-fit:cover;
+    display:block;
+    transition:.6s;
+}
+
+.project-card:hover img{
+    transform:scale(1.08);
+}
+
+.project-info{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:30px;
+    padding-top:100px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.95)
+    );
+}
+
+.project-info span{
+    color:#00aaff;
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:3px;
+}
+
+.project-info h3{
+    font-size:28px;
+    margin:8px 0;
+}
+
+.project-info p{
+    color:#c4d0dc;
+    font-size:18px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.about-image{
+    min-height:550px;
+    border-radius:35px;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.2),
+        rgba(0,0,0,.5)
+    ),
+    url("images/solar.jpg")
+    center/cover no-repeat;
+
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.about-text h2{
+    font-size:clamp(48px,6vw,75px);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.about-text p{
+    color:#aebbc9;
+    font-size:23px;
+    margin-bottom:30px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.feature{
+    padding:22px;
+    background:#0b1421;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,.08);
+    font-size:20px;
+    transition:.3s;
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+    border-color:#008cff;
+}
+
+.feature strong{
+    display:block;
+    color:#00aaff;
+    font-size:25px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    margin:50px 7% 120px;
+    padding:100px 30px;
+    border-radius:40px;
+    text-align:center;
+
+    background:
+    linear-gradient(
+        120deg,
+        rgba(0,140,255,.9),
+        rgba(0,50,110,.9)
+    ),
+    url("images/solar3.jpg")
+    center/cover no-repeat;
+}
+
+.cta h2{
+    font-size:clamp(45px,7vw,80px);
+    line-height:1.1;
+    margin-bottom:25px;
+}
+
+.cta p{
+    font-size:25px;
+    margin-bottom:35px;
+}
+
+.cta .btn{
+    background:white;
+    color:#06101d;
+}
+
+.cta .btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 30px rgba(0,0,0,.3);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+    text-align:center;
+    background:#070d18;
+}
+
+.contact-box{
+    max-width:750px;
+    margin:50px auto 0;
+    padding:45px;
+    border-radius:30px;
+    background:#0c1624;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.contact-box p{
+    margin:18px 0;
+    color:#b7c3cf;
+    font-size:23px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:45px 7%;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    border-top:1px solid rgba(255,255,255,.1);
+    color:#8492a1;
+    font-size:20px;
+}
+
+
+/* =========================
+   WHATSAPP
+========================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
+
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:#25d366;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:34px;
+
+    z-index:9999;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.5);
+
+    transition:.3s;
+}
+
+.whatsapp:hover{
+    transform:translateY(-50%) scale(1.12);
+}
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:
+        opacity 1s ease,
+        transform 1s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    body{
+        font-size:19px;
+    }
+
+    nav{
+        padding:18px 5%;
+    }
+
+    .logo{
+        font-size:26px;
+    }
+
+    .nav-btn{
+        font-size:16px;
+        padding:11px 15px;
+    }
+
+    .hero{
+        padding:140px 5% 70px;
+    }
+
+    .hero h1{
+        font-size:65px;
+    }
+
+    .hero p{
+        font-size:22px;
+    }
+
+    .small-title{
+        font-size:17px;
+        letter-spacing:3px;
+    }
+
+    section{
+        padding:90px 5%;
+    }
+
+    .section-title h2{
+        font-size:50px;
+    }
+
+    .section-title p{
+        font-size:20px;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-card{
+        padding:35px 25px;
+    }
+
+    .service-card h3{
+        font-size:27px;
+    }
+
+    .service-card p{
+        font-size:19px;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .project-card{
+        min-height:400px;
+    }
+
+    .project-card img{
+        height:400px;
+    }
+
+    .project-info h3{
+        font-size:25px;
+    }
+
+    .about-image{
+        min-height:350px;
+    }
+
+    .about-text h2{
+        font-size:50px;
+    }
+
+    .about-text p{
+        font-size:20px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .cta{
+        margin:20px 5% 80px;
+        padding:70px 20px;
+    }
+
+    .cta h2{
+        font-size:50px;
+    }
+
+    .cta p{
+        font-size:21px;
+    }
+
+    .contact-box{
+        padding:30px 20px;
+    }
+
+    .contact-box p{
+        font-size:20px;
+    }
+
+    .whatsapp{
+        width:60px;
+        height:60px;
+        right:12px;
+        font-size:29px;
+    }
+
+    footer{
+        padding:35px 5%;
+        font-size:17px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL PHONES
+========================= */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:55px;
+    }
+
+    .hero p{
+        font-size:20px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .cta h2{
+        font-size:42px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+<a href="#home" class="logo">
+LEXIS<span>POWER</span>
+</a>
+
+<div class="nav-links">
+
+<a href="#home">Home</a>
+
+<a href="#services">Services</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+<a href="#contact" class="nav-btn">
+Get a Quote
+</a>
+
+</nav>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-content reveal">
+
+<div class="small-title">
+POWERING THE FUTURE
+</div>
+
+<h1>
+BUILD.<br>
+POWER.<br>
+<span>CONNECT.</span>
+</h1>
+
+<p>
+Reliable construction, solar installation and
+professional electrical solutions for homes,
+businesses and projects.
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn primary">
+Get a Quote
+</a>
+
+<a href="#services" class="btn secondary">
+Explore Services
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section class="services" id="services">
+
+<div class="section-title reveal">
+
+<div class="small-title">
+WHAT WE DO
+</div>
+
+<h2>
+Our Services
+</h2>
+
+<p>
+Professional solutions designed to power,
+protect and improve your space.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card reveal">
+
+<div class="icon">🏠</div>
+
+<h3>
+Construction
+</h3>
+
+<p>
+Building and construction solutions
+for residential and commercial projects.
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="icon">☀️</div>
+
+<h3>
+Solar Installation
+</h3>
+
+<p>
+Clean and reliable solar power systems
+designed for your energy needs.
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="icon">⚡</div>
+
+<h3>
+Electrical Services
+</h3>
+
+<p>
+Professional electrical installation,
+repairs and maintenance.
+</p>
+
+</div>
+
+
+<div class="service-card reveal">
+
+<div class="icon">🔧</div>
+
+<h3>
+Maintenance
+</h3>
+
+<p>
+Reliable maintenance solutions to keep
+your electrical systems running smoothly.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section class="projects" id="projects">
+
+<div class="section-title reveal">
+
+<div class="small-title">
+OUR WORK
+</div>
+
+<h2>
+Featured Projects
+</h2>
+
+<p>
+A look at some of the construction, solar
+and electrical projects we deliver.
+</p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project-card reveal">
+
+<img
+src="images/house1.jpg"
+alt="House construction project"
+>
+
+<div class="project-info">
+
+<span>CONSTRUCTION</span>
+
+<h3>
+Modern Building Project
+</h3>
+
+<p>
+Residential construction and development.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card reveal">
+
+<img
+src="images/solar.jpg"
+alt="Solar installation project"
+>
+
+<div class="project-info">
+
+<span>SOLAR</span>
+
+<h3>
+Solar Power Installation
+</h3>
+
+<p>
+Reliable solar energy solution.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card reveal">
+
+<img
+src="images/electrical.jpg"
+alt="Electrical project"
+>
+
+<div class="project-info">
+
+<span>ELECTRICAL</span>
+
+<h3>
+Electrical Installation
+</h3>
+
+<p>
+Professional electrical installation.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card reveal">
+
+<img
+src="images/building.jpg"
+alt="Completed building"
+>
+
+<div class="project-info">
+
+<span>CONSTRUCTION</span>
+
+<h3>
+Completed Building
+</h3>
+
+<p>
+Quality construction delivered.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card reveal">
+
+<img
+src="images/interior.jpg"
+alt="Interior electrical work"
+>
+
+<div class="project-info">
+
+<span>ELECTRICAL</span>
+
+<h3>
+Interior Electrical Work
+</h3>
+
+<p>
+Safe and professional electrical systems.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="project-card reveal">
+
+<img
+src="images/solar3.jpg"
+alt="Solar panels"
+>
+
+<div class="project-info">
+
+<span>SOLAR</span>
+
+<h3>
+Solar Energy System
+</h3>
+
+<p>
+Clean and efficient power solution.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about" id="about">
+
+<div class="about-image reveal">
+</div>
+
+<div class="about-text reveal">
+
+<div class="small-title">
+ABOUT LEXIS POWER
+</div>
+
+<h2>
+Powering ideas into reality.
+</h2>
+
+<p>
+Lexis Power provides construction, solar and
+electrical solutions with a focus on reliability,
+quality and professional service.
+</p>
+
+<div class="features">
+
+<div class="feature">
+
+<strong>01</strong>
+
+Reliable Service
+
+</div>
+
+
+<div class="feature">
+
+<strong>02</strong>
+
+Quality Work
+
+</div>
+
+
+<div class="feature">
+
+<strong>03</strong>
+
+Professional Team
+
+</div>
+
+
+<div class="feature">
+
+<strong>04</strong>
+
+Customer Focus
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     CTA
+========================= -->
+
+<div class="cta reveal">
+
+<h2>
+Ready to power your future?
+</h2>
+
+<p>
+Let's discuss your next project.
+</p>
+
+<a href="#contact" class="btn">
+Start Your Project
+</a>
+
+</div>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+<div class="section-title reveal">
+
+<div class="small-title">
+GET IN TOUCH
+</div>
+
+<h2>
+Let's Build & Power
+Your Future.
+</h2>
+
+</div>
+
+
+<div class="contact-box reveal">
+
+<p>
+📞 Phone: +234 XXX XXX XXXX
+</p>
+
+<p>
+📧 Email: your@email.com
+</p>
+
+<p>
+📍 Location: Nigeria
+</p>
+
+<br>
+
+<a
+href="https://wa.me/234XXXXXXXXXX"
+class="btn primary">
+
+Contact Us on WhatsApp
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+<div>
+© 2026 Lexis Power
+</div>
+
+<div>
+Build • Power • Connect
+</div>
+
+</footer>
+
+
+<!-- =========================
+     FLOATING WHATSAPP
+========================= -->
+
+<a
+href="https://wa.me/2348155262968"
+class="whatsapp"
+aria-label="Chat with Lexis Power on WhatsApp">
+
+💬
+
+</a>
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+const reveals =
+document.querySelectorAll(".reveal");
+
+function revealOnScroll(){
+
+    reveals.forEach(element => {
+
+        const windowHeight =
+            window.innerHeight;
+
+        const elementTop =
+            element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 100){
+
+            element.classList.add("active");
+
+        }
+
+    });
+
+}
+
+window.addEventListener(
+    "scroll",
+    revealOnScroll
+);
+
+revealOnScroll();
+
+</script>
+
+</body>
+</html>
